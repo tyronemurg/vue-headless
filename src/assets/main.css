@@ -1,3 +1,16 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+
+/* Style for the "Read More" link */
+a.read-more-link {
+    color: #3182ce; /* Set your desired color */
+    text-decoration: none;
+  }
+  
+  a.read-more-link:hover {
+    text-decoration: underline;
+  }
+  

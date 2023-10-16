@@ -28,4 +28,17 @@ export default {
     );
     return posts;
   },
+
+  async getPostById(postId) {
+    const response = await axios.get(`${BASE_URL}/posts/${postId}`);
+    const featured_media_src = await getFeaturedImage(response.data.id);
+    console.log(response);
+
+    return {
+      id: response.data.id,
+      title: response.data.title,
+      content: response.data.content,
+      featured_media_src,
+    };
+  },
 };
